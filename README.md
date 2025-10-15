@@ -130,6 +130,14 @@ The `describe()` function groups related tests together, making test output more
 - **Babel** - JavaScript compiler (for ES6 module support)
 - **Node.js** - JavaScript runtime
 
+## 📁 Project Files
+
+- **`functions.js`** - Contains all the functions to be tested
+- **`functions.test.js`** - Contains all the test cases organized with `describe()` blocks
+- **`babel.config.js`** - Configures Babel to transpile ES6 modules for Jest
+- **`jsconfig.json`** - Enables IntelliSense/autocomplete for Jest in your code editor
+- **`package.json`** - Project dependencies and scripts
+
 ## 📝 What I Learned
 
 - How to set up Jest in a JavaScript project
