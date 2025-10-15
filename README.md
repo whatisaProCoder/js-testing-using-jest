@@ -99,15 +99,30 @@ analyseArray([1, 2, 3, 4, 5]);
 
 ### Tests (`functions.test.js`)
 
-Each function has multiple test cases to ensure it works correctly in different scenarios. Tests use Jest's `expect()` and `toBe()` matchers.
+Tests are organized into logical groups using Jest's `describe()` function, making them easier to read and maintain. Each test group contains multiple test cases to ensure functions work correctly in different scenarios.
 
-**Example test:**
+**Test Structure:**
+
+- **String operations** - Tests for `capitalize` and `reverseString`
+- **Math/calculator operations** - Tests for all calculator methods
+- **caesarCipher function** - Tests for encryption logic
+- **analyseArray function** - Tests for array analysis
+
+**Example test group:**
 
 ```javascript
-test("capitalize the first character of a string", () => {
-  expect(capitalize("hello world")).toBe("Hello world");
+describe("string operations", () => {
+  test("capitalize the first character of a string", () => {
+    expect(capitalize("hello world")).toBe("Hello world");
+  });
+
+  test("reverse the given string", () => {
+    expect(reverseString("Hello")).toBe("olleH");
+  });
 });
 ```
+
+The `describe()` function groups related tests together, making test output more organized and easier to understand.
 
 ## 🛠️ Technologies Used
 
@@ -118,7 +133,8 @@ test("capitalize the first character of a string", () => {
 ## 📝 What I Learned
 
 - How to set up Jest in a JavaScript project
-- Writing test cases using Jest's syntax
+- Writing test cases using Jest's syntax (`test()`, `expect()`, `toBe()`)
+- Organizing tests with `describe()` blocks for better structure
 - Test-Driven Development (TDD) principles
 - Using ES6 modules with Jest and Babel
 - Testing different types of functions (pure functions, factory functions)
